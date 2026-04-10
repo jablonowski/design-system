@@ -1,0 +1,20 @@
+@import '~@your-design-system/tokens/src/tokens/color.json';
+@import '~@your-design-system/tokens/src/tokens/typography.json';
+@import '~@your-design-system/tokens/src/tokens/spacing.json';
+
+.demo {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding: var(--spacing-medium);
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-large);
+}
+
+.demo-header {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-small);
+}
+
+.demo-content {
+    line-height: var(--line-height-normal);
+}

@@ -1,0 +1,12 @@
+@import '~@your-design-system/tokens/src/tokens/color.json';
+@import '~@your-design-system/tokens/src/tokens/typography.json';
+@import '~@your-design-system/tokens/src/tokens/spacing.json';
+
+.home {
+    background-color: color.primary;
+    color: color.text;
+    padding: spacing.medium;
+    font-family: typography.body.fontFamily;
+    font-size: typography.body.fontSize;
+    line-height: typography.body.lineHeight;
+}

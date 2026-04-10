@@ -1,0 +1,21 @@
+{
+  "name": "design-system",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Design System monorepo — tokens, components, and example app.",
+  "scripts": {
+    "build:tokens": "cd packages/tokens && npm run build",
+    "build:components": "cd packages/components && npm run build",
+    "build:all": "npm run build:tokens && npm run build:components",
+    "release:tokens": "cd packages/tokens && npm run release",
+    "release:tokens:minor": "cd packages/tokens && npm run release:minor",
+    "release:tokens:major": "cd packages/tokens && npm run release:major",
+    "release:components": "cd packages/components && npm run release",
+    "release:components:minor": "cd packages/components && npm run release:minor",
+    "release:components:major": "cd packages/components && npm run release:major",
+    "start:example": "cd packages/example && ng serve",
+    "install:all": "cd packages/tokens && npm install && cd ../components && npm install && cd ../example && npm install"
+  },
+  "author": "Mateusz",
+  "license": "MIT"
+}

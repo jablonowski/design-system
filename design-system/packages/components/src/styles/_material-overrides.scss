@@ -1,0 +1,32 @@
+@import './_theme.scss';
+
+$primary-color: var(--color-primary);
+$secondary-color: var(--color-secondary);
+$background-color: var(--color-background);
+$text-color: var(--color-text);
+$border-color: var(--color-border);
+
+.mat-button {
+    background-color: $primary-color;
+    color: $text-color;
+    border: 1px solid $border-color;
+
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+.mat-input {
+    border: 1px solid $border-color;
+    color: $text-color;
+
+    &:focus {
+        border-color: $primary-color;
+    }
+}
+
+.mat-card {
+    background-color: $background-color;
+    border: 1px solid $border-color;
+    box-shadow: var(--elevation-1);
+}

@@ -1,0 +1,72 @@
+{
+  "color": {
+    "primary": {
+      "50":  { "value": "#e3f2fd" },
+      "100": { "value": "#bbdefb" },
+      "200": { "value": "#90caf9" },
+      "300": { "value": "#64b5f6" },
+      "400": { "value": "#42a5f5" },
+      "500": { "value": "#003B7E" },
+      "600": { "value": "#002d62" },
+      "700": { "value": "#002352" },
+      "800": { "value": "#001a3e" },
+      "900": { "value": "#00112a" }
+    },
+    "secondary": {
+      "50":  { "value": "#ffeaec" },
+      "100": { "value": "#ffcdd0" },
+      "200": { "value": "#f69a9e" },
+      "300": { "value": "#ef6e74" },
+      "400": { "value": "#f9464e" },
+      "500": { "value": "#E30613" },
+      "600": { "value": "#c10510" },
+      "700": { "value": "#a1040d" },
+      "800": { "value": "#80030a" },
+      "900": { "value": "#5e0208" }
+    },
+    "neutral": {
+      "0":   { "value": "#ffffff" },
+      "50":  { "value": "#f8f9fa" },
+      "100": { "value": "#f1f3f5" },
+      "200": { "value": "#e9ecef" },
+      "300": { "value": "#dee2e6" },
+      "400": { "value": "#ced4da" },
+      "500": { "value": "#adb5bd" },
+      "600": { "value": "#868e96" },
+      "700": { "value": "#495057" },
+      "800": { "value": "#343a40" },
+      "900": { "value": "#212529" }
+    },
+    "success": {
+      "light": { "value": "#d4edda" },
+      "main":  { "value": "#28a745" },
+      "dark":  { "value": "#155724" }
+    },
+    "warning": {
+      "light": { "value": "#fff3cd" },
+      "main":  { "value": "#ffc107" },
+      "dark":  { "value": "#856404" }
+    },
+    "error": {
+      "light": { "value": "#f8d7da" },
+      "main":  { "value": "#dc3545" },
+      "dark":  { "value": "#721c24" }
+    },
+    "info": {
+      "light": { "value": "#d1ecf1" },
+      "main":  { "value": "#17a2b8" },
+      "dark":  { "value": "#0c5460" }
+    },
+    "background": {
+      "primary":   { "value": "#ffffff" },
+      "secondary": { "value": "#f8f9fa" },
+      "dark":      { "value": "#003B7E" }
+    },
+    "text": {
+      "primary":   { "value": "#212529" },
+      "secondary": { "value": "#495057" },
+      "disabled":  { "value": "#adb5bd" },
+      "inverse":   { "value": "#ffffff" }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+@import '~@your-design-system/tokens/src/tokens/color.json';
+@import '~@your-design-system/tokens/src/tokens/typography.json';
+@import '~@your-design-system/tokens/src/tokens/spacing.json';
+
+:host {
+    display: block;
+    padding: spacing.large;
+    background-color: color.background;
+    color: color.text;
+    font-family: typography.fontFamily;
+}
+
+h1 {
+    font-size: typography.fontSize.large;
+    font-weight: typography.fontWeight.bold;
+}
+
+p {
+    font-size: typography.fontSize.medium;
+    line-height: typography.lineHeight.normal;
+}
