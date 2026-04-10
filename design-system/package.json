@@ -13,7 +13,7 @@
     "release:components": "cd packages/components && npm run release",
     "release:components:minor": "cd packages/components && npm run release:minor",
     "release:components:major": "cd packages/components && npm run release:major",
-    "start:example": "cd packages/example && ng serve",
+    "start:example": "npm run start --prefix packages/example",
     "install:all": "cd packages/tokens && npm install && cd ../components && npm install && cd ../example && npm install"
   },
   "author": "Mateusz",

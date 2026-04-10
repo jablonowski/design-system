@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+mat-card {
+  font-family: var(--font-family-base);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--elevation-sm);
+}

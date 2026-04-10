@@ -1,39 +1,8 @@
-@import '~@your-org/tokens/src/tokens/color.json';
-@import '~@your-org/tokens/src/tokens/typography.json';
-@import '~@your-org/tokens/src/tokens/spacing.json';
-@import '~@your-org/tokens/src/tokens/border.json';
-@import '~@your-org/tokens/src/tokens/elevation.json';
-@import '~@your-org/tokens/src/tokens/breakpoint.json';
+@import '@jablonowski/tokens/dist/css/variables.css';
 
-/* Global styles for the example application */
 body {
-    font-family: var(--font-family-base);
-    color: var(--color-text);
-    background-color: var(--color-background);
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: var(--font-weight-bold);
-}
-
-.container {
-    max-width: var(--spacing-container);
-    margin: 0 auto;
-    padding: var(--spacing-medium);
-}
-
-.button {
-    background-color: var(--color-primary);
-    color: var(--color-white);
-    border: var(--border-width) solid var(--color-primary-dark);
-    box-shadow: var(--elevation-2);
-    padding: var(--spacing-small) var(--spacing-medium);
-    border-radius: var(--border-radius);
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: var(--color-primary-dark);
+  margin: 0;
+  font-family: var(--ds-typography-font-family-base, 'Roboto', sans-serif);
+  color: var(--ds-color-text-primary, #212121);
+  background: var(--ds-color-background-primary, #ffffff);
 }

@@ -1,44 +1,65 @@
-@import '~@your-org/tokens/src/tokens/color.json';
-@import '~@your-org/tokens/src/tokens/typography.json';
-@import '~@your-org/tokens/src/tokens/spacing.json';
-@import '~@your-org/tokens/src/tokens/border.json';
-@import '~@your-org/tokens/src/tokens/elevation.json';
-@import '~@your-org/tokens/src/tokens/breakpoint.json';
+@use '@angular/material' as mat;
 
-$primary-color: color.primary;
-$secondary-color: color.secondary;
-$background-color: color.background;
-$text-color: color.text;
+$ds-primary: mat.m2-define-palette((
+  50: #e3f2fd,
+  100: #bbdefb,
+  200: #90caf9,
+  300: #64b5f6,
+  400: #42a5f5,
+  500: #003B7E,
+  600: #002d62,
+  700: #002352,
+  800: #001a3e,
+  900: #00112a,
+  contrast: (
+    50: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87),
+    200: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    400: rgba(0, 0, 0, 0.87),
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+));
 
-$font-family: typography.fontFamily;
-$font-size-base: typography.fontSize.base;
-$line-height-base: typography.lineHeight.base;
+$ds-secondary: mat.m2-define-palette((
+  50: #ffeaec,
+  100: #ffcdd0,
+  200: #f69a9e,
+  300: #ef6e74,
+  400: #f9464e,
+  500: #E30613,
+  600: #c10510,
+  700: #a1040d,
+  800: #80030a,
+  900: #5e0208,
+  contrast: (
+    50: rgba(0, 0, 0, 0.87),
+    100: rgba(0, 0, 0, 0.87),
+    200: rgba(0, 0, 0, 0.87),
+    300: rgba(0, 0, 0, 0.87),
+    400: white,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+  )
+));
 
-$spacing-unit: spacing.unit;
+$ds-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $ds-primary,
+    accent: $ds-secondary,
+  ),
+  typography: mat.m2-define-typography-config(
+    $font-family: "'PKO Bank Polski', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+  ),
+));
 
-$border-radius: border.radius;
-$border-color: border.color;
-$elevation-level: elevation.level;
-
-body {
-    font-family: $font-family;
-    font-size: $font-size-base;
-    line-height: $line-height-base;
-    color: $text-color;
-    background-color: $background-color;
-}
-
-.button {
-    background-color: $primary-color;
-    color: $text-color;
-    padding: $spacing-unit * 2;
-    border-radius: $border-radius;
-    box-shadow: $elevation-level;
-}
-
-.card {
-    border: 1px solid $border-color;
-    border-radius: $border-radius;
-    padding: $spacing-unit * 3;
-    box-shadow: $elevation-level;
+@mixin apply-theme {
+  @include mat.all-component-themes($ds-theme);
 }

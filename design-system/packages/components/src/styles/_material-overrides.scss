@@ -1,32 +1,22 @@
-@import './_theme.scss';
+@use './theme' as theme;
 
-$primary-color: var(--color-primary);
-$secondary-color: var(--color-secondary);
-$background-color: var(--color-background);
-$text-color: var(--color-text);
-$border-color: var(--color-border);
+// Apply the Material theme
+@include theme.apply-theme;
 
-.mat-button {
-    background-color: $primary-color;
-    color: $text-color;
-    border: 1px solid $border-color;
-
-    &:hover {
-        background-color: darken($primary-color, 10%);
-    }
+// Custom overrides using CSS custom properties from tokens
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-flat-button {
+  font-family: var(--font-family-base);
+  border-radius: var(--border-radius-md);
+  letter-spacing: var(--font-letter-spacing-normal);
 }
 
-.mat-input {
-    border: 1px solid $border-color;
-    color: $text-color;
-
-    &:focus {
-        border-color: $primary-color;
-    }
+.mat-mdc-form-field {
+  font-family: var(--font-family-base);
 }
 
-.mat-card {
-    background-color: $background-color;
-    border: 1px solid $border-color;
-    box-shadow: var(--elevation-1);
+.mat-mdc-card {
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--elevation-sm);
 }

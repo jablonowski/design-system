@@ -1,9 +1,9 @@
 {
-  "name": "@design-system/components",
+  "name": "@jablonowski/components",
   "version": "1.0.0",
   "description": "Angular component library built on Angular Material, themed with design system tokens.",
   "scripts": {
-    "build": "ng build components --configuration production",
+    "build": "ng-packagr -p ng-package.json",
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
     "prepublishOnly": "npm run build",
@@ -12,13 +12,26 @@
     "release:major": "npm run build && cd dist && npm version major && npm publish --access public"
   },
   "peerDependencies": {
+    "@angular/cdk": "^19.0.0",
     "@angular/common": "^19.0.0",
     "@angular/core": "^19.0.0",
-    "@angular/material": "^19.0.0",
-    "@angular/cdk": "^19.0.0"
+    "@angular/material": "^19.0.0"
   },
   "dependencies": {
-    "@design-system/tokens": "^1.0.0"
+    "@jablonowski/tokens": "^1.0.0"
+  },
+  "devDependencies": {
+    "@angular/animations": "^19.2.20",
+    "@angular/cdk": "^19.2.19",
+    "@angular/common": "^19.0.0",
+    "@angular/compiler": "^19.0.0",
+    "@angular/compiler-cli": "^19.0.0",
+    "@angular/core": "^19.0.0",
+    "@angular/forms": "^19.2.20",
+    "@angular/material": "^19.2.19",
+    "@angular/platform-browser": "^19.2.20",
+    "ng-packagr": "^19.0.0",
+    "typescript": "~5.5.0"
   },
   "keywords": [
     "angular",

@@ -1,6 +1,6 @@
 {
-  "name": "@design-system/tokens",
-  "version": "1.0.2",
+  "name": "@jablonowski/tokens",
+  "version": "1.0.6",
   "description": "Design tokens for the design system, including colors, typography, spacing, borders, elevation, and breakpoints.",
   "main": "dist/js/tokens.js",
   "types": "dist/ts/tokens.d.ts",
