@@ -1,0 +1,63 @@
+:host {
+  display: block;
+}
+
+.feature-card {
+  font-family: var(--ds-typography-font-family-base, 'Roboto', sans-serif);
+  border-radius: var(--ds-border-radius-md, 8px);
+  border-left: 4px solid var(--ds-color-neutral-300, #e0e0e0);
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+  height: 100%;
+  cursor: default;
+
+  &:hover {
+    border-left-color: var(--ds-color-primary-base, #003b7e);
+    box-shadow: var(--ds-elevation-md, 0 4px 12px rgba(0, 0, 0, 0.15));
+    transform: translateY(-2px);
+  }
+}
+
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--ds-color-primary-light, #e3f2fd);
+  margin-bottom: 1rem;
+
+  mat-icon {
+    font-size: 28px;
+    width: 28px;
+    height: 28px;
+    color: var(--ds-color-primary-base, #003b7e);
+  }
+}
+
+.card-heading {
+  font-size: var(--ds-typography-font-size-lg, 1.125rem);
+  font-weight: var(--ds-typography-font-weight-semibold, 600);
+  color: var(--ds-color-text-primary, #212121);
+  margin: 0 0 0.5rem;
+}
+
+.card-description {
+  font-size: var(--ds-typography-font-size-sm, 0.875rem);
+  color: var(--ds-color-text-secondary, #616161);
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.card-link {
+  display: inline-block;
+  font-size: var(--ds-typography-font-size-sm, 0.875rem);
+  font-weight: var(--ds-typography-font-weight-medium, 500);
+  color: var(--ds-color-primary-base, #003b7e);
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

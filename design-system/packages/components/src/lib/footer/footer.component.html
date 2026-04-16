@@ -1,0 +1,14 @@
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <ng-content select="[footerLinks]"></ng-content>
+    </div>
+    <mat-divider></mat-divider>
+    <div class="footer-bottom">
+      <span class="copyright">&copy; {{ year }} {{ companyName }}</span>
+      <div class="social">
+        <ng-content select="[footerSocial]"></ng-content>
+      </div>
+    </div>
+  </div>
+</footer>

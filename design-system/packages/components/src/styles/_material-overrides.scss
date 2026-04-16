@@ -1,22 +1,23 @@
 @use './theme' as theme;
+@use 'scss/variables' as tokens;
 
 // Apply the Material theme
 @include theme.apply-theme;
 
-// Custom overrides using CSS custom properties from tokens
+// Custom overrides using design tokens
 .mat-mdc-button,
 .mat-mdc-raised-button,
 .mat-mdc-flat-button {
-  font-family: var(--font-family-base);
-  border-radius: var(--border-radius-md);
-  letter-spacing: var(--font-letter-spacing-normal);
+  font-family: tokens.$font-family-base;
+  border-radius: tokens.$border-radius-md;
+  letter-spacing: tokens.$font-letter-spacing-normal;
 }
 
 .mat-mdc-form-field {
-  font-family: var(--font-family-base);
+  font-family: tokens.$font-family-base;
 }
 
 .mat-mdc-card {
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--elevation-sm);
+  border-radius: tokens.$border-radius-md;
+  box-shadow: tokens.$elevation-sm;
 }

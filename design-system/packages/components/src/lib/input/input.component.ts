@@ -16,6 +16,8 @@ export class DsInputComponent {
   @Input() value = '';
   @Input() type: 'text' | 'email' | 'password' | 'number' = 'text';
   @Input() disabled = false;
+  @Input() multiline = false;
+  @Input() rows = 4;
   @Output() valueChange = new EventEmitter<string>();
 
   onInput(value: string): void {

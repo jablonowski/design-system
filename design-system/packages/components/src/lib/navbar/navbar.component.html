@@ -1,0 +1,24 @@
+<header class="navbar-wrapper">
+  <div class="navbar-bar">
+    <div class="navbar-container">
+      <span class="brand">{{ brand }}</span>
+      <nav class="nav-links">
+        <ng-content select="[navLinks]"></ng-content>
+      </nav>
+      <span class="spacer"></span>
+      <div class="nav-actions">
+        <ng-content select="[navActions]"></ng-content>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mega-menu dropdown panel -->
+  @if (activeMenu) {
+    <div class="mega-menu-backdrop" (click)="closeMenu()"></div>
+    <div class="mega-menu-panel">
+      <div class="mega-menu-content">
+        <ng-content select="[megaMenu]"></ng-content>
+      </div>
+    </div>
+  }
+</header>

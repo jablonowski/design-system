@@ -1,6 +1,6 @@
 {
   "name": "@jablonowski/components",
-  "version": "1.0.1",
+  "version": "1.0.8",
   "description": "Angular component library built on Angular Material, themed with design system tokens.",
   "peerDependencies": {
     "@angular/cdk": "^19.0.0",

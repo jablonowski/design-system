@@ -1,0 +1,14 @@
+<mat-card class="link-card" appearance="outlined">
+  <mat-card-content>
+    <div class="link-card-layout">
+      @if (icon) {
+        <mat-icon class="link-icon">{{ icon }}</mat-icon>
+      }
+      <div class="link-text">
+        <h4>{{ heading }}</h4>
+        <p>{{ description }}</p>
+      </div>
+      <mat-icon class="chevron">chevron_right</mat-icon>
+    </div>
+  </mat-card-content>
+</mat-card>

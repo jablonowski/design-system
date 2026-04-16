@@ -1,11 +1,22 @@
 <mat-form-field appearance="outline">
   <mat-label>{{ label }}</mat-label>
-  <input
-    matInput
-    [type]="type"
-    [placeholder]="placeholder"
-    [value]="value"
-    [disabled]="disabled"
-    (input)="onInput($any($event.target).value)"
-  />
+  @if (multiline) {
+    <textarea
+      matInput
+      [rows]="rows"
+      [placeholder]="placeholder"
+      [value]="value"
+      [disabled]="disabled"
+      (input)="onInput($any($event.target).value)"
+    ></textarea>
+  } @else {
+    <input
+      matInput
+      [type]="type"
+      [placeholder]="placeholder"
+      [value]="value"
+      [disabled]="disabled"
+      (input)="onInput($any($event.target).value)"
+    />
+  }
 </mat-form-field>

@@ -1,0 +1,14 @@
+<mat-card class="feature-card" appearance="outlined">
+  <mat-card-content>
+    @if (icon) {
+      <div class="icon-wrapper">
+        <mat-icon>{{ icon }}</mat-icon>
+      </div>
+    }
+    <h3 class="card-heading">{{ heading }}</h3>
+    <p class="card-description">{{ description }}</p>
+    @if (linkText) {
+      <a class="card-link">{{ linkText }} →</a>
+    }
+  </mat-card-content>
+</mat-card>
