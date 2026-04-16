@@ -1,16 +1,34 @@
 {
   "name": "@jablonowski/tokens",
-  "version": "1.0.6",
-  "description": "Design tokens for the design system, including colors, typography, spacing, borders, elevation, and breakpoints.",
-  "main": "dist/js/tokens.js",
-  "types": "dist/ts/tokens.d.ts",
+  "version": "1.2.0",
+  "description": "Multi-customer design tokens for the design system.",
+  "main": "dist/ds-bank/js/tokens.js",
+  "types": "dist/ds-bank/ts/tokens.d.ts",
+  "exports": {
+    "./ds-bank": {
+      "import": "./dist/ds-bank/js/tokens.js",
+      "types": "./dist/ds-bank/ts/tokens.d.ts",
+      "style": "./dist/ds-bank/css/variables.css",
+      "default": "./dist/ds-bank/js/tokens.js"
+    },
+    "./ds-bank/*": "./dist/ds-bank/*",
+    "./ng-bank": {
+      "import": "./dist/ng-bank/js/tokens.js",
+      "types": "./dist/ng-bank/ts/tokens.d.ts",
+      "style": "./dist/ng-bank/css/variables.css",
+      "default": "./dist/ng-bank/js/tokens.js"
+    },
+    "./ng-bank/*": "./dist/ng-bank/*"
+  },
   "files": [
     "dist/**/*"
   ],
   "scripts": {
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
-    "build": "style-dictionary build --config src/config.js",
+    "build": "npm run build:ds-bank && npm run build:ng-bank",
+    "build:ds-bank": "style-dictionary build --config src/ds-bank/config.js",
+    "build:ng-bank": "style-dictionary build --config src/ng-bank/config.js",
     "prepublishOnly": "npm run build",
     "release": "npm version patch && npm publish --access public",
     "release:minor": "npm version minor && npm publish --access public",

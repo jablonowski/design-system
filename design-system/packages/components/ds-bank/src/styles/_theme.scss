@@ -1,0 +1,66 @@
+@use '@angular/material' as mat;
+@use 'scss/variables' as tokens;
+
+$ds-primary: mat.m2-define-palette((
+  50: tokens.$color-primary-50,
+  100: tokens.$color-primary-100,
+  200: tokens.$color-primary-200,
+  300: tokens.$color-primary-300,
+  400: tokens.$color-primary-400,
+  500: tokens.$color-primary-500,
+  600: tokens.$color-primary-600,
+  700: tokens.$color-primary-700,
+  800: tokens.$color-primary-800,
+  900: tokens.$color-primary-900,
+  contrast: (
+    50: tokens.$color-primary-contrast-50,
+    100: tokens.$color-primary-contrast-100,
+    200: tokens.$color-primary-contrast-200,
+    300: tokens.$color-primary-contrast-300,
+    400: tokens.$color-primary-contrast-400,
+    500: tokens.$color-primary-contrast-500,
+    600: tokens.$color-primary-contrast-600,
+    700: tokens.$color-primary-contrast-700,
+    800: tokens.$color-primary-contrast-800,
+    900: tokens.$color-primary-contrast-900,
+  )
+));
+
+$ds-secondary: mat.m2-define-palette((
+  50: tokens.$color-secondary-50,
+  100: tokens.$color-secondary-100,
+  200: tokens.$color-secondary-200,
+  300: tokens.$color-secondary-300,
+  400: tokens.$color-secondary-400,
+  500: tokens.$color-secondary-500,
+  600: tokens.$color-secondary-600,
+  700: tokens.$color-secondary-700,
+  800: tokens.$color-secondary-800,
+  900: tokens.$color-secondary-900,
+  contrast: (
+    50: tokens.$color-secondary-contrast-50,
+    100: tokens.$color-secondary-contrast-100,
+    200: tokens.$color-secondary-contrast-200,
+    300: tokens.$color-secondary-contrast-300,
+    400: tokens.$color-secondary-contrast-400,
+    500: tokens.$color-secondary-contrast-500,
+    600: tokens.$color-secondary-contrast-600,
+    700: tokens.$color-secondary-contrast-700,
+    800: tokens.$color-secondary-contrast-800,
+    900: tokens.$color-secondary-contrast-900,
+  )
+));
+
+$ds-theme: mat.m2-define-light-theme((
+  color: (
+    primary: $ds-primary,
+    accent: $ds-secondary,
+  ),
+  typography: mat.m2-define-typography-config(
+    $font-family: tokens.$font-family-base,
+  ),
+));
+
+@mixin apply-theme {
+  @include mat.all-component-themes($ds-theme);
+}

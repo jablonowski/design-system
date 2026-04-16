@@ -1,0 +1,23 @@
+@use './theme' as theme;
+@use 'scss/variables' as tokens;
+
+// Apply the Material theme
+@include theme.apply-theme;
+
+// Custom overrides using design tokens
+.mat-mdc-button,
+.mat-mdc-raised-button,
+.mat-mdc-flat-button {
+  font-family: tokens.$font-family-base;
+  border-radius: tokens.$border-radius-md;
+  letter-spacing: tokens.$font-letter-spacing-normal;
+}
+
+.mat-mdc-form-field {
+  font-family: tokens.$font-family-base;
+}
+
+.mat-mdc-card {
+  border-radius: tokens.$border-radius-md;
+  box-shadow: tokens.$elevation-sm;
+}

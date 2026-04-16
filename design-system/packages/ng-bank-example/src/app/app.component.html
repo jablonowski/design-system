@@ -1,0 +1,203 @@
+<!-- ───── NAVBAR ───── -->
+<ds-navbar brand="NG Bank" #navbar>
+  <div navLinks>
+    <button mat-button (click)="navbar.toggleMenu('oferta')">
+      Oferta <mat-icon class="nav-chevron">expand_more</mat-icon>
+    </button>
+    <button mat-button (click)="navbar.toggleMenu('bankowosc')">
+      Bankowość online <mat-icon class="nav-chevron">expand_more</mat-icon>
+    </button>
+    <button mat-button (click)="navbar.closeMenu()">Pomoc</button>
+    <button mat-button (click)="navbar.closeMenu()">Aktualności</button>
+  </div>
+  <div navActions>
+    <ds-button variant="secondary">Zaloguj się</ds-button>
+  </div>
+  <div megaMenu>
+    @if (navbar.activeMenu === 'oferta') {
+      <h3 class="mega-menu-heading">Oferta</h3>
+      <div class="mega-menu-grid">
+        <ds-feature-card icon="account_balance_wallet" heading="Konto osobiste"
+          description="Konto z korzyściami – otwórz w 5 minut przez aplikację" linkText="Sprawdź"></ds-feature-card>
+        <ds-feature-card icon="credit_card" heading="Karta kredytowa"
+          description="Płać wygodnie kartą z cashbackiem i ubezpieczeniem" linkText="Wybierz kartę"></ds-feature-card>
+        <ds-feature-card icon="savings" heading="Oszczędności"
+          description="Konto oszczędnościowe z atrakcyjnym oprocentowaniem do 5,5%" linkText="Zacznij oszczędzać"></ds-feature-card>
+        <ds-feature-card icon="home" heading="Kredyt hipoteczny"
+          description="Sfinansuj swoje wymarzone mieszkanie na korzystnych warunkach" linkText="Sprawdź ofertę"></ds-feature-card>
+      </div>
+    }
+    @if (navbar.activeMenu === 'bankowosc') {
+      <h3 class="mega-menu-heading">Bankowość online</h3>
+      <div class="mega-menu-grid">
+        <ds-feature-card icon="phone_iphone" heading="Aplikacja Moje NG"
+          description="Twój bank zawsze pod ręką – płatności, przelewy, oszczędności" linkText="Pobierz"></ds-feature-card>
+        <ds-feature-card icon="devices" heading="Serwis internetowy"
+          description="Zarządzaj finansami wygodnie z komputera" linkText="Przejdź"></ds-feature-card>
+        <ds-feature-card icon="contactless" heading="BLIK"
+          description="Płać telefonem, wypłacaj z bankomatów, wysyłaj pieniądze" linkText="Więcej o BLIK"></ds-feature-card>
+      </div>
+    }
+  </div>
+</ds-navbar>
+
+<!-- ───── HERO ───── -->
+<ds-hero
+  heading="Konto, z&nbsp;którym zyskasz więcej"
+  subtitle="Załóż konto w aplikacji Moje NG i odbierz bonus powitalny">
+  <ul>
+    <li>Darmowe wypłaty z bankomatów w&nbsp;Polsce i&nbsp;za granicą</li>
+    <li>Wygodna aplikacja mobilna Moje NG z&nbsp;trybem ciemnym</li>
+    <li>Płatności BLIK, Apple Pay i&nbsp;Google Pay bez dodatkowych opłat</li>
+    <li>Oprocentowanie konta oszczędnościowego do&nbsp;5,5% w&nbsp;skali roku</li>
+  </ul>
+  <div heroActions>
+    <ds-button variant="primary">Załóż konto</ds-button>
+    <a class="hero-help-link">Masz już konto? Zaloguj się do serwisu</a>
+  </div>
+  <div heroVisual>
+    <img src="https://picsum.photos/id/1/600/400" alt="Bankowość mobilna" class="hero-image" />
+  </div>
+</ds-hero>
+
+<!-- ───── FEATURES SECTION ───── -->
+<section class="section features-section">
+  <div class="container">
+    <h2 class="section-title">Wszystko, czego potrzebujesz — w jednej aplikacji</h2>
+    <div class="features-grid">
+      <ds-feature-card
+        icon="swap_horiz"
+        heading="Szybkie przelewy"
+        description="Przelewy natychmiastowe, BLIK, zlecenia stałe — wszystko pod ręką, 24 godziny na dobę."
+        linkText="Więcej">
+      </ds-feature-card>
+      <ds-feature-card
+        icon="trending_up"
+        heading="Oszczędności i inwestycje"
+        description="Konto oszczędnościowe, lokaty, fundusze inwestycyjne — zarabiaj na swoich pieniądzach."
+        linkText="Więcej">
+      </ds-feature-card>
+      <ds-feature-card
+        icon="child_care"
+        heading="Bank dla dzieci"
+        description="Konto, karta i apka dla Twoich dzieci. Naucz je zarządzania pieniędzmi od małego."
+        linkText="Sprawdź ofertę">
+      </ds-feature-card>
+      <ds-feature-card
+        icon="receipt_long"
+        heading="Wnioski online"
+        description="Rodzina 800+, ePUAP, PUE ZUS — złóż wnioski bez wychodzenia z domu."
+        linkText="Więcej o e-Urzędzie">
+      </ds-feature-card>
+    </div>
+  </div>
+</section>
+
+<!-- ───── SECURITY SECTION ───── -->
+<section class="section security-section">
+  <div class="container">
+    <h2 class="section-title">Twoje bezpieczeństwo jest naszym priorytetem</h2>
+    <div class="link-cards-grid">
+      <ds-link-card
+        icon="fingerprint"
+        heading="Logowanie biometryczne"
+        description="Zaloguj się odciskiem palca lub skanem twarzy — szybko i bezpiecznie.">
+      </ds-link-card>
+      <ds-link-card
+        icon="verified_user"
+        heading="Autoryzacja mobilna"
+        description="Potwierdzaj transakcje jednym kliknięciem w aplikacji Moje NG.">
+      </ds-link-card>
+      <ds-link-card
+        icon="notifications_active"
+        heading="Powiadomienia push"
+        description="Bądź na bieżąco — otrzymuj alerty o każdej operacji na koncie.">
+      </ds-link-card>
+      <ds-link-card
+        icon="gpp_good"
+        heading="Ochrona przed fraudem"
+        description="Zaawansowane systemy monitorujące transakcje 24/7 w czasie rzeczywistym.">
+      </ds-link-card>
+    </div>
+    <div class="security-cta">
+      <ds-button variant="primary">Dowiedz się więcej o bezpieczeństwie</ds-button>
+    </div>
+  </div>
+</section>
+
+<!-- ───── CONTACT SECTION ───── -->
+<section class="section contact-section">
+  <div class="container">
+    <h2 class="section-title">Potrzebujesz pomocy? Jesteśmy dla Ciebie</h2>
+    <div class="contact-grid">
+      <ds-card title="Napisz do nas">
+        <div class="contact-form">
+          <ds-input label="Imię i nazwisko" placeholder="Jan Kowalski"></ds-input>
+          <ds-input label="Adres e-mail" placeholder="jan&#64;example.com" type="email"></ds-input>
+          <mat-form-field appearance="outline" class="textarea-field">
+            <mat-label>Treść wiadomości</mat-label>
+            <textarea matInput rows="5" placeholder="W czym możemy pomóc?"></textarea>
+          </mat-form-field>
+          <ds-button variant="primary">Wyślij wiadomość</ds-button>
+        </div>
+      </ds-card>
+      <div class="contact-info">
+        <ds-card title="Infolinia">
+          <p><strong>800 123 456</strong></p>
+          <p>Bezpłatna infolinia dostępna 24/7</p>
+        </ds-card>
+        <ds-card title="Wirtualny Asystent">
+          <p>Nasz chatbot pomoże Ci rozwiązać najczęstsze problemy.</p>
+          <ds-button variant="secondary">Rozpocznij rozmowę</ds-button>
+        </ds-card>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───── FOOTER ───── -->
+<ds-footer companyName="NG Bank S.A. (Design System Demo)" [year]="2026">
+  <div footerLinks>
+    <div>
+      <h4>O banku</h4>
+      <ul>
+        <li><a>O nas</a></li>
+        <li><a>Relacje inwestorskie</a></li>
+        <li><a>ESG i zrównoważony rozwój</a></li>
+        <li><a>Kariera</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Dla Ciebie</h4>
+      <ul>
+        <li><a>Konta osobiste</a></li>
+        <li><a>Karty kredytowe</a></li>
+        <li><a>Kredyty i pożyczki</a></li>
+        <li><a>Oszczędności i inwestycje</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Pomoc</h4>
+      <ul>
+        <li><a>Centrum wsparcia</a></li>
+        <li><a>Bezpieczeństwo</a></li>
+        <li><a>Regulaminy</a></li>
+        <li><a>Polityka prywatności</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Kursy walut</h4>
+      <ul>
+        <li><a>EUR: 4.0590 / 4.4415</a></li>
+        <li><a>USD: 3.4732 / 3.8006</a></li>
+        <li><a>GBP: 4.6604 / 5.0996</a></li>
+        <li><a>CHF: 4.4652 / 4.7414</a></li>
+      </ul>
+    </div>
+  </div>
+  <div footerSocial>
+    <a><mat-icon>facebook</mat-icon></a>
+    <a><mat-icon>camera_alt</mat-icon></a>
+    <a><mat-icon>ondemand_video</mat-icon></a>
+  </div>
+</ds-footer>

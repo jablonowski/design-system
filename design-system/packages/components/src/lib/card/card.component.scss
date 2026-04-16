@@ -3,10 +3,10 @@
 }
 
 mat-card {
-  font-family: var(--font-family-base);
-  border-radius: var(--border-radius-md);
+  font-family: var(--ds-font-family-base);
+  border-radius: var(--ds-border-radius-md);
   border-left: 4px solid var(--ds-color-neutral-300, #e0e0e0);
-  box-shadow: var(--elevation-sm);
+  box-shadow: var(--ds-elevation-sm);
   transition: border-color 0.2s ease;
 
   &:hover {

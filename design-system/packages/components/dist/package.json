@@ -1,6 +1,6 @@
 {
   "name": "@jablonowski/components",
-  "version": "1.0.8",
+  "version": "1.2.1",
   "description": "Angular component library built on Angular Material, themed with design system tokens.",
   "peerDependencies": {
     "@angular/cdk": "^19.0.0",
@@ -9,7 +9,7 @@
     "@angular/material": "^19.0.0"
   },
   "dependencies": {
-    "@jablonowski/tokens": "^1.0.0",
+    "@jablonowski/tokens": "^1.2.0",
     "tslib": "^2.3.0"
   },
   "keywords": [
@@ -37,6 +37,14 @@
     ".": {
       "types": "./index.d.ts",
       "default": "./fesm2022/jablonowski-components.mjs"
+    },
+    "./ds-bank": {
+      "types": "./ds-bank/index.d.ts",
+      "default": "./fesm2022/jablonowski-components-ds-bank.mjs"
+    },
+    "./ng-bank": {
+      "types": "./ng-bank/index.d.ts",
+      "default": "./fesm2022/jablonowski-components-ng-bank.mjs"
     }
   },
   "sideEffects": false

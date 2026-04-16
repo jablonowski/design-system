@@ -5,7 +5,7 @@
   "lib": {
     "entryFile": "src/public-api.ts",
     "styleIncludePaths": [
-      "node_modules/@jablonowski/tokens/dist"
+      "node_modules/@jablonowski/tokens/dist/ds-bank"
     ]
   }
 }

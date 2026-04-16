@@ -13,8 +13,9 @@
     "release:components": "cd packages/components && npm run release",
     "release:components:minor": "cd packages/components && npm run release:minor",
     "release:components:major": "cd packages/components && npm run release:major",
-    "start:example": "npm run start --prefix packages/example",
-    "install:all": "cd packages/tokens && npm install && cd ../components && npm install && cd ../example && npm install"
+    "start:ds-bank": "npm run start --prefix packages/ds-bank-example",
+    "start:ng-bank": "npm run start --prefix packages/ng-bank-example",
+    "install:all": "cd packages/tokens && npm install && cd ../components && npm install && cd ../ds-bank-example && npm install && cd ../ng-bank-example && npm install"
   },
   "author": "Mateusz",
   "license": "MIT"

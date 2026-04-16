@@ -3,7 +3,7 @@
 }
 
 .link-card {
-  font-family: var(--ds-typography-font-family-base, 'Roboto', sans-serif);
+  font-family: var(--ds-font-family-base, 'Roboto', sans-serif);
   cursor: pointer;
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
   border-left: 4px solid var(--ds-color-neutral-300, #e0e0e0);
@@ -33,14 +33,14 @@
 
   h4 {
     margin: 0 0 0.25rem;
-    font-size: var(--ds-typography-font-size-base, 1rem);
-    font-weight: var(--ds-typography-font-weight-semibold, 600);
+    font-size: var(--ds-font-size-base, 1rem);
+    font-weight: var(--ds-font-weight-semibold, 600);
     color: var(--ds-color-primary-base, #003b7e);
   }
 
   p {
     margin: 0;
-    font-size: var(--ds-typography-font-size-sm, 0.875rem);
+    font-size: var(--ds-font-size-sm, 0.875rem);
     color: var(--ds-color-text-secondary, #616161);
     line-height: 1.5;
   }

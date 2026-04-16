@@ -1,0 +1,8 @@
+@import '@jablonowski/tokens/ds-bank/css/variables.css';
+
+body {
+  margin: 0;
+  font-family: var(--ds-typography-font-family-base, 'Roboto', sans-serif);
+  color: var(--ds-color-text-primary, #212121);
+  background: var(--ds-color-background-primary, #ffffff);
+}

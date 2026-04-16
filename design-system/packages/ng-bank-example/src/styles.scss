@@ -1,0 +1,8 @@
+@import '@jablonowski/tokens/ng-bank/css/variables.css';
+
+body {
+  margin: 0;
+  font-family: var(--ds-typography-font-family-base, 'Roboto', sans-serif);
+  color: var(--ds-color-text-primary, #1a1a1a);
+  background: var(--ds-color-background-primary, #ffffff);
+}

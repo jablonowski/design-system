@@ -1,12 +1,12 @@
 {
   "name": "@jablonowski/components",
-  "version": "1.0.0",
+  "version": "1.2.1",
   "description": "Angular component library built on Angular Material, themed with design system tokens.",
   "scripts": {
     "build": "ng-packagr -p ng-package.json",
     "clean": "rm -rf dist",
     "prebuild": "npm run clean",
-    "prepublishOnly": "npm run build",
+    "publish:lib": "npm run build && cd dist && npm publish --access public",
     "release": "npm run build && cd dist && npm version patch && npm publish --access public",
     "release:minor": "npm run build && cd dist && npm version minor && npm publish --access public",
     "release:major": "npm run build && cd dist && npm version major && npm publish --access public"
@@ -18,7 +18,7 @@
     "@angular/material": "^19.0.0"
   },
   "dependencies": {
-    "@jablonowski/tokens": "^1.0.0"
+    "@jablonowski/tokens": "^1.2.0"
   },
   "devDependencies": {
     "@angular/animations": "^19.2.20",
