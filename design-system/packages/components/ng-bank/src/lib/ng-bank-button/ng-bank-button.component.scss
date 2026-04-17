@@ -1,0 +1,31 @@
+:host {
+  display: inline-block;
+}
+
+button {
+  font-family: var(--ds-font-family-base, sans-serif);
+  border-radius: var(--ds-border-radius-full, 9999px);
+  padding: 0 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: var(--ds-font-weight-semibold, 600);
+  font-size: var(--ds-font-size-sm, 0.875rem);
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+
+  &:hover:not(:disabled) {
+    box-shadow: var(--ds-elevation-md, 0 4px 12px rgba(0, 0, 0, 0.15));
+    transform: translateY(-1px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+}
+
+.btn-icon {
+  margin-right: 0.5rem;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}

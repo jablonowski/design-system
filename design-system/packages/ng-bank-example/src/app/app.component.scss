@@ -92,6 +92,15 @@
   }
 }
 
+::ng-deep ds-hero .hero {
+  min-height: 520px !important;
+}
+
+::ng-deep ds-hero .hero-container {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
 // Nav chevron icon
 .nav-chevron {
   font-size: 18px;

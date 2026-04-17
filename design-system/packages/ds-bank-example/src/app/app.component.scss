@@ -92,6 +92,10 @@
   }
 }
 
+::ng-deep ds-hero .hero-bg {
+  background-position-y: -70px !important;
+}
+
 // Nav chevron icon
 .nav-chevron {
   font-size: 18px;

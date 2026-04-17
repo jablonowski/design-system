@@ -1,0 +1,11 @@
+<button
+  mat-flat-button
+  [color]="variant"
+  [disabled]="disabled"
+  [type]="type"
+>
+  @if (icon) {
+    <mat-icon class="btn-icon">{{ icon }}</mat-icon>
+  }
+  <ng-content></ng-content>
+</button>

@@ -1,3 +1,11 @@
+<!-- ───── PROMO BAR (ng-bank specific) ───── -->
+<ng-promo-bar
+  icon="local_offer"
+  message="Otwórz konto w aplikacji Moje NG i odbierz 200 zł premii — oferta ważna do 30.06.2026!"
+  linkText="Sprawdź szczegóły"
+  variant="primary">
+</ng-promo-bar>
+
 <!-- ───── NAVBAR ───── -->
 <ds-navbar brand="NG Bank" #navbar>
   <div navLinks>
@@ -44,19 +52,19 @@
 <!-- ───── HERO ───── -->
 <ds-hero
   heading="Konto, z&nbsp;którym zyskasz więcej"
-  subtitle="Załóż konto w aplikacji Moje NG i odbierz bonus powitalny">
+  subtitle="Załóż konto w aplikacji Moje NG i odbierz bonus powitalny"
+  backgroundImage="1.jpg">
   <ul>
     <li>Darmowe wypłaty z bankomatów w&nbsp;Polsce i&nbsp;za granicą</li>
     <li>Wygodna aplikacja mobilna Moje NG z&nbsp;trybem ciemnym</li>
+    <li>Płatności BLIK, Apple Pay i&nbsp;Google Pay bez dodatkowych opłat</li>
+    <li>Oprocentowanie konta oszczędnościowego do&nbsp;5,5% w&nbsp;skali roku</li>
     <li>Płatności BLIK, Apple Pay i&nbsp;Google Pay bez dodatkowych opłat</li>
     <li>Oprocentowanie konta oszczędnościowego do&nbsp;5,5% w&nbsp;skali roku</li>
   </ul>
   <div heroActions>
     <ds-button variant="primary">Załóż konto</ds-button>
     <a class="hero-help-link">Masz już konto? Zaloguj się do serwisu</a>
-  </div>
-  <div heroVisual>
-    <img src="https://picsum.photos/id/1/600/400" alt="Bankowość mobilna" class="hero-image" />
   </div>
 </ds-hero>
 

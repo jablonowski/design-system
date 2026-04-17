@@ -12,4 +12,5 @@ import { MatIconModule } from '@angular/material/icon';
 export class DsHeroComponent {
   @Input() heading = '';
   @Input() subtitle = '';
+  @Input() backgroundImage = '';
 }

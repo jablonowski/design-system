@@ -1,0 +1,90 @@
+:host {
+  display: block;
+}
+
+.promo-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--ds-font-family-base, sans-serif);
+  font-size: var(--ds-font-size-sm, 0.875rem);
+  font-weight: var(--ds-font-weight-medium, 500);
+  animation: slideDown 0.3s ease;
+
+  &--primary {
+    background-color: var(--ds-color-primary-base, #ff6200);
+    color: #fff;
+  }
+
+  &--accent {
+    background-color: var(--ds-color-secondary-500, #525199);
+    color: #fff;
+  }
+
+  &--info {
+    background-color: var(--ds-color-info-light, #e3f2fd);
+    color: var(--ds-color-text-primary, #1a1a1a);
+  }
+}
+
+.promo-bar__content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.promo-bar__icon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+}
+
+.promo-bar__message {
+  flex: 1;
+}
+
+.promo-bar__link {
+  text-decoration: underline;
+  cursor: pointer;
+  white-space: nowrap;
+  font-weight: var(--ds-font-weight-semibold, 600);
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+.promo-bar__close {
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  opacity: 0.7;
+  transition: opacity 0.15s;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  mat-icon {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

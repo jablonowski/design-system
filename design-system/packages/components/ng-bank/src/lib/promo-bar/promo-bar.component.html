@@ -1,0 +1,16 @@
+@if (visible) {
+  <div class="promo-bar" [class]="'promo-bar--' + variant">
+    <div class="promo-bar__content">
+      <mat-icon class="promo-bar__icon">{{ icon }}</mat-icon>
+      <span class="promo-bar__message">{{ message }}</span>
+      @if (linkText) {
+        <a class="promo-bar__link">{{ linkText }}</a>
+      }
+    </div>
+    @if (dismissible) {
+      <button class="promo-bar__close" (click)="dismiss()">
+        <mat-icon>close</mat-icon>
+      </button>
+    }
+  </div>
+}

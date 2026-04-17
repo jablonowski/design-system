@@ -8,7 +8,8 @@ import {
   DsFeatureCardComponent,
   DsLinkCardComponent,
   DsFooterComponent,
-} from '@jablonowski/components';
+  NgBankPromoBarComponent,
+} from '@jablonowski/components/ng-bank';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -26,6 +27,7 @@ import { MatInputModule } from '@angular/material/input';
     DsFeatureCardComponent,
     DsLinkCardComponent,
     DsFooterComponent,
+    NgBankPromoBarComponent,
     MatIconModule,
     MatButtonModule,
     MatFormFieldModule,

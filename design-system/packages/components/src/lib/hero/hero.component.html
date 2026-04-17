@@ -1,4 +1,8 @@
-<section class="hero">
+<section class="hero" [class.hero--bg-image]="backgroundImage">
+  @if (backgroundImage) {
+    <div class="hero-bg" [style.background-image]="'url(' + backgroundImage + ')'"></div>
+    <div class="hero-bg-gradient"></div>
+  }
   <div class="hero-container">
     <div class="hero-content">
       <h1>{{ heading }}</h1>
@@ -12,8 +16,10 @@
         <ng-content select="[heroActions]"></ng-content>
       </div>
     </div>
-    <div class="hero-visual">
-      <ng-content select="[heroVisual]"></ng-content>
-    </div>
+    @if (!backgroundImage) {
+      <div class="hero-visual">
+        <ng-content select="[heroVisual]"></ng-content>
+      </div>
+    }
   </div>
 </section>

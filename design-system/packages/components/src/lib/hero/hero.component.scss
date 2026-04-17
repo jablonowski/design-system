@@ -6,6 +6,41 @@
   background: linear-gradient(135deg, var(--ds-color-primary-base, #003b7e) 0%, var(--ds-color-primary-dark, #002a5c) 100%);
   color: #fff;
   min-height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+
+// --- Background-image mode ---
+.hero--bg-image {
+  .hero-container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-content {
+    max-width: 540px;
+  }
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center right;
+  z-index: 0;
+}
+
+.hero-bg-gradient {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    to right,
+    var(--ds-color-primary-base, #003b7e) 0%,
+    var(--ds-color-primary-base, #003b7e) 30%,
+    rgba(0, 0, 0, 0.45) 65%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
 }
 
 .hero-container {
@@ -106,5 +141,17 @@ h1 {
 
   .hero-visual {
     display: none;
+  }
+
+  .hero-bg-gradient {
+    background: linear-gradient(
+      to bottom,
+      var(--ds-color-primary-base, #003b7e) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
+
+  .hero--bg-image .hero-content {
+    max-width: 100%;
   }
 }
