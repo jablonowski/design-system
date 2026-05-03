@@ -1,0 +1,17 @@
+# Ignore node_modules and other common files
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+npm-debug.log
+yarn-error.log
+debug-storybook.log    
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# Miscellaneous
+.DS_Store

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "es2022",
+    "module": "es2022",
+    "moduleResolution": "node",
+    "lib": ["es2022", "dom"],
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "useDefineForClassFields": false,
+    "baseUrl": "..",
+    "paths": {
+      "@jablonowski/components": ["./src/public-api.ts"]
+    }
+  },
+  "include": [
+    "../src/**/*.ts",
+    "../ng-bank/**/*.ts",
+    "../stories/**/*.stories.ts",
+    "./**/*.ts"
+  ],
+  "exclude": ["../node_modules"]
+}
